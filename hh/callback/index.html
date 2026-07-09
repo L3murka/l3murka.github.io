@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="ru">
+<head><meta charset="utf-8"><title>HH OAuth callback</title></head>
+<body>
+<h3>Код авторизации hh.ru</h3>
+<p><b id="code">Код не найден в URL.</b></p>
+<p>Скопируй код и выполни: <code>python run.py hh-auth &lt;код&gt;</code></p>
+<script>
+const c = new URLSearchParams(location.search).get("code");
+if (c) document.getElementById("code").textContent = c;
+</script>
+</body>
+</html>
